@@ -1,6 +1,6 @@
 import { Roles } from "../enums/role";
 
-export interface User {
+export interface Customer {
     id: string;
     email: string;
     role: Roles;
@@ -9,12 +9,12 @@ export interface User {
     phone: string;
 }
 
-export interface LoginUser {
-    user: User,
-    access_token: string;
+export interface LoginCustomer {
+    customer: Customer,
+    accessToken: string;
 }
 
-export interface RegisterUser {
+export interface RegisterCustomer {
     email: string;
     password: string;
     firstName: string;

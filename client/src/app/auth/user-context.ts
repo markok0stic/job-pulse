@@ -1,6 +1,6 @@
-import { User } from '../models/user';
+import { Customer } from '../customers/models/customer';
 
-export const setUser = (user: User | null) => {
+export const setUser = (user: Customer | null) => {
   if (user) {
     localStorage.setItem('user', JSON.stringify(user));
   }
@@ -9,7 +9,7 @@ export const setUser = (user: User | null) => {
   }
 };
 
-export const getUser = (): User | null => {
+export const getUser = (): Customer | null => {
   const user = localStorage.getItem('user');
 
   if (user) {

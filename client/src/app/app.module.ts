@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
+import {CustomersModule} from "./customers/customers.module";
+import {ShowsModule} from "./shows/shows.module";
 
 @NgModule({
   declarations: [
@@ -13,7 +15,7 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
     NavbarComponent
   ],
   imports: [
-    StoreModule.forRoot(reducers),
+    StoreModule.forRoot({}),
     // Instrumentation must be imported after importing StoreModule (config is optional)
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
@@ -24,7 +26,8 @@ import {StoreDevtoolsModule} from "@ngrx/store-devtools";
     }),
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {})
+    CustomersModule,
+    ShowsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

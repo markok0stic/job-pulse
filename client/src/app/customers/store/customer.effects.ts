@@ -2,22 +2,20 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { mergeMap, map, catchError, of } from 'rxjs';
-import { setToken, setUser } from 'client-old/src/app/auth/user-context';
-import { LoginUser, User } from 'client-old/src/app/models/user';
-import { UserService } from '../../services/user.service';
-import * as UserActions from './user.actions';
+import { UserService } from '../services/user.service';
+import * as UserActions from './customer.actions';
 
 @Injectable()
-export class UserEffects {
+export class CustomerEffects {
   constructor(
     private action$: Actions,
     private userService: UserService,
     private router: Router
   ) {}
 
-  loginUser$ = createEffect(() =>
+  /*loginUser$ = createEffect(() =>
     this.action$.pipe(
-      ofType(UserActions.loginUser),
+      ofType(UserActions.loginCustomer),
       mergeMap(({ email, password }) =>
         this.userService.login(email, password).pipe(
           map((data: LoginUser) => {
@@ -38,7 +36,7 @@ export class UserEffects {
 
   logoutUser$ = createEffect(() =>
     this.action$.pipe(
-      ofType(UserActions.logoutUser),
+      ofType(UserActions.logoutCustomer),
       mergeMap(()=>{
         setToken(null);
         setUser(null);
@@ -49,7 +47,7 @@ export class UserEffects {
 
   registerUser$ = createEffect(() =>
     this.action$.pipe(
-      ofType(UserActions.registerUser),
+      ofType(UserActions.registerCustomer),
       mergeMap(({ registerData }) =>
         this.userService.register(registerData).pipe(
           map(() => {
@@ -79,5 +77,5 @@ export class UserEffects {
         )
       )
     )
-  );
+  );*/
 }

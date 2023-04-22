@@ -3,10 +3,10 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
 import { Observable } from 'rxjs';
 import {Store} from "@ngrx/store";
-import {AppState} from "../../../../client-old/src/app/app.state";
-import {User} from "../models/user";
+import {Customer} from "../customers/models/customer";
 import {getToken} from "./user-context";
-import {Roles} from "../enums/role";
+import {Roles} from "../customers/enums/role";
+import {AppState} from "../app.state";
 
 @Injectable({
   providedIn: 'root'
@@ -18,10 +18,10 @@ export class AuthGuard implements CanActivate {
     this.jwtHelper = new JwtHelperService();
   }
 
-  getUserFromStore(): User | null {
-    let user: User | null = null;
+  getUserFromStore(): Customer | null {
+    let user: Customer | null = null;
 
-    this.store.subscribe((state) => {
+    this.store.subscribe((state: AppState) => {
       user = state.userState.user;
     });
     return user;
@@ -33,7 +33,7 @@ export class AuthGuard implements CanActivate {
     | boolean
     | UrlTree {
     const token: string | null = getToken();
-    const user: User | null = this.getUserFromStore();
+    const user: Customer | null = this.getUserFromStore();
 
     const authorizedRole = route.data['role'];
 
