@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
-import {CustomersModule} from "./customers/customers.module";
+import {CustomersModule} from "./customer/customers.module";
 import {ShowsModule} from "./shows/shows.module";
 
 @NgModule({

@@ -9,5 +9,18 @@ export const initialState: ShowState = {
 
 export const reducers = createReducer(
   initialState,
-  on(ShowsActions.getShows, (state) => ({...state, isLoading:true}))
+  on(ShowsActions.getShows, (state) => ({
+    ...state,
+    isLoading:true
+  })),
+  on(ShowsActions.getShowsSuccess, (state, action) => ({
+    ...state,
+    isLoading: false,
+    shows: action.shows
+  })),
+  on(ShowsActions.getShowsFailure, (state, action) => ({
+    ...state,
+    isLoading: false,
+    error: action.error
+  }))
 );

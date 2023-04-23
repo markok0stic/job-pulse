@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { mergeMap, map, catchError, of } from 'rxjs';
-import { UserService } from '../services/user.service';
+import { CustomerService } from '../services/customer.service';
 import * as UserActions from './customer.actions';
 
 @Injectable()
 export class CustomerEffects {
   constructor(
     private action$: Actions,
-    private userService: UserService,
+    private userService: CustomerService,
     private router: Router
   ) {}
 

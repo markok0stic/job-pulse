@@ -8,7 +8,7 @@ import {reducers} from "./store/customer.reducers";
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule, StoreModule.forFeature('customers',reducers)
+    CommonModule, StoreModule.forFeature('customer',reducers)
   ]
 })
 export class CustomersModule { }
