@@ -1,18 +1,15 @@
 import { Injectable } from '@angular/core';
-import {delay, Observable, of} from "rxjs";
+import {delay, from, Observable, of} from "rxjs";
 import {Show} from "../models/show";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ShowsService {
-  constructor() { }
   getShows(): Observable<Show> {
-    const shows= [
-      {id:1,name: 'Play A'},
-      {id:2,name: 'Play B'},
-      {id:3,name: 'Play C'},
+    const shows = [
+      {id: 1, name: 'Play A'},
+      {id: 2, name: 'Play B'},
+      {id: 3, name: 'Play C'},
     ];
-    return of(shows).pipe(delay(2000));
+    return from(shows).pipe(delay(2000));
   }
 }

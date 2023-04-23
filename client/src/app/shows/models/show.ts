@@ -1,7 +1,7 @@
 import {Actor} from "./actor";
 import {PerformanceDay} from "./performanceDay";
 
-export interface Show{
+export interface Show {
   id: number;
   name: string;
  /* description?: string;
