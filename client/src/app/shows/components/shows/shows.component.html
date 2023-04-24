@@ -1,3 +1,10 @@
 <p>shows works!</p>
 
 <div *ngIf="isLoading$ | async">Loading...</div>
+
+<div *ngIf="error$ | async as err">{{err}}</div>
+
+<div *ngFor="let show of shows$ | async">
+  {{show.id}}
+  {{show.name}}
+</div>

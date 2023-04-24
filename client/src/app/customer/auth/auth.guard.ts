@@ -3,10 +3,10 @@ import { JwtHelperService } from '@auth0/angular-jwt';
 import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
 import { Observable } from 'rxjs';
 import {Store} from "@ngrx/store";
-import {Customer} from "../customer/models/customer";
+import {Customer} from "../models/customer";
 import {getToken} from "./user-context";
-import {Roles} from "../customer/enums/role";
-import {AppState} from "../app.state";
+import {Roles} from "../enums/role";
+import {AppState} from "../../app.state";
 
 @Injectable({
   providedIn: 'root'

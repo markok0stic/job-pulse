@@ -11,4 +11,4 @@ import {reducers} from "./store/customer.reducers";
     CommonModule, StoreModule.forFeature('customer',reducers)
   ]
 })
-export class CustomersModule { }
+export class CustomerModule { }

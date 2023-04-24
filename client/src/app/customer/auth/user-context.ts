@@ -1,4 +1,4 @@
-import { Customer } from '../customer/models/customer';
+import { Customer } from '../models/customer';
 
 export const setUser = (user: Customer | null) => {
   if (user) {
