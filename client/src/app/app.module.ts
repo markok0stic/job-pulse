@@ -1,17 +1,13 @@
 import {isDevMode, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
-import { NavbarComponent } from './navbar/components/navbar/navbar.component';
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
-import {CustomerModule} from "./customer/customer.module";
+import {CustomerModule} from "./customers/customer.module";
 import {ShowsModule} from "./shows/shows.module";
+import {WebStoreModule} from "./web-store/web-store.module";
 import {EffectsModule} from "@ngrx/effects";
-import {HeaderModule} from "./header/header.module";
-import {FooterModule} from "./footer/footer.module";
-import {NavbarModule} from "./navbar/navbar.module";
 
 @NgModule({
   declarations: [
@@ -30,10 +26,8 @@ import {NavbarModule} from "./navbar/navbar.module";
     }),
     BrowserModule,
     AppRoutingModule,
-    HeaderModule,
-    FooterModule,
-    NavbarModule,
     CustomerModule,
+    WebStoreModule,
     ShowsModule,
   ],
   providers: [],

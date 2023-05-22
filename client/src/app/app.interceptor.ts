@@ -6,7 +6,7 @@ import {
   HttpRequest,
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { getToken } from './customer/auth/user-context';
+import { getToken } from './customers/auth/user-context';
 
 export class InterceptorService implements HttpInterceptor {
   constructor() {}
