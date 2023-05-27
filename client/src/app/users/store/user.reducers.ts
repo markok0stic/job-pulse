@@ -1,12 +1,12 @@
-import { createReducer, on } from '@ngrx/store';
+import {createReducer, on} from '@ngrx/store';
 import * as UserActions from './user.actions'
-import {UserState} from "./userState";
+import {UserState} from "./user.state";
 
 export const initialState: UserState = {
-  isLoading:false,
-  user:null,
-  accessToken:null,
-  error:null
+  isLoading: false,
+  user: null,
+  accessToken: null,
+  error: null
 };
 
 export const reducers = createReducer(
@@ -21,7 +21,7 @@ export const reducers = createReducer(
     isLoading: false,
     error: null
   })),
-  on(UserActions.loginSuccess, (state, { data }) => ({
+  on(UserActions.loginSuccess, (state, {data}) => ({
     user: data.user,
     accessToken: data.accessToken,
     isLoading: false,

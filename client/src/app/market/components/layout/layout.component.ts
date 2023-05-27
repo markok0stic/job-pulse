@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {NavigationEnd, Router} from "@angular/router";
 import {User} from "../../../users/types/user";
-import {selectUser} from "../../../users/store/user.selector";
+import {selectUser} from "../../../users/store/user.selectors";
 import {select, Store} from "@ngrx/store";
 import {AppState} from "../../../app.state";
 import {Observable} from "rxjs";
