@@ -4,10 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
-import {CustomerModule} from "./customers/customer.module";
-import {ShowsModule} from "./shows/shows.module";
-import {WebStoreModule} from "./web-store/web-store.module";
 import {EffectsModule} from "@ngrx/effects";
+import {UsersModule} from "./users/users.module";
+import {MarketModule} from "./market/market.module";
 
 @NgModule({
   declarations: [
@@ -26,9 +25,8 @@ import {EffectsModule} from "@ngrx/effects";
     }),
     BrowserModule,
     AppRoutingModule,
-    CustomerModule,
-    WebStoreModule,
-    ShowsModule,
+    UsersModule,
+    MarketModule
   ],
   providers: [],
   bootstrap: [AppComponent]

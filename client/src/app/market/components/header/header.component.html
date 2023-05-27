@@ -1,0 +1,13 @@
+<header class="header not-logged-in">
+  <div class="logo">JobPulse</div>
+  <nav>
+    <ul>
+      <li><a href="#">Browse Projects</a></li>
+      <li><a href="#">Sign Up</a></li>
+      <li><button (click)="showLogin = !showLogin">Login</button></li>
+    </ul>
+  </nav>
+</header>
+
+
+<app-login *ngIf="showLogin"></app-login>

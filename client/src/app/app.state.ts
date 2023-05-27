@@ -1,7 +1,5 @@
-import {ShowState} from "./shows/store/show.state";
-import {CustomerState} from "./customers/store/customer.state";
+import {UserState} from "./users/store/userState";
 
 export interface AppState{
-  shows: ShowState,
-  customer: CustomerState
+  users: UserState
 }
