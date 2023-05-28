@@ -11,9 +11,11 @@ import {UsersModule} from "../users/users.module";
 import {StoreModule} from "@ngrx/store";
 import {reducers} from "./store/market.reducers";
 import { OverlayComponent } from './components/overlay/overlay.component';
+import {ProjectsContainerComponent} from "../projects/components/projects-container/projects-container.component";
 
 const routes: Routes = [
-  { path: '**', redirectTo: '/not-found' }
+  { path: '**', redirectTo: '/not-found' },
+  { path: '', component: ProjectsContainerComponent}
 ]
 
 @NgModule({

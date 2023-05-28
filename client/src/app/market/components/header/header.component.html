@@ -3,8 +3,13 @@
   <nav>
     <ul>
       <li><a href="#">Browse Projects</a></li>
-      <li><button (click)="toggleLogin()">Login</button></li>
-      <li><button (click)="toggleRegister()">Register</button></li>
+      <ng-container *ngIf="!user">
+        <li><button (click)="toggleLogin()">Login</button></li>
+        <li><button (click)="toggleRegister()">Register</button></li>
+      </ng-container>
+      <ng-container *ngIf="!user">
+        <li><app-profile-button></app-profile-button></li>
+      </ng-container>
     </ul>
   </nav>
 </header>
