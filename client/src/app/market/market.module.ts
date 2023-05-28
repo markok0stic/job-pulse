@@ -8,6 +8,9 @@ import { LayoutComponent } from './components/layout/layout.component';
 import {ProjectsModule} from "../projects/projects.module";
 import {ReviewsModule} from "../reviews/reviews.module";
 import {UsersModule} from "../users/users.module";
+import {StoreModule} from "@ngrx/store";
+import {reducers} from "./store/market.reducers";
+import { OverlayComponent } from './components/overlay/overlay.component';
 
 const routes: Routes = [
   { path: '**', redirectTo: '/not-found' }
@@ -17,7 +20,8 @@ const routes: Routes = [
   declarations: [
     HeaderComponent,
     FooterComponent,
-    LayoutComponent
+    LayoutComponent,
+    OverlayComponent
   ],
   exports: [
     HeaderComponent,
@@ -30,7 +34,8 @@ const routes: Routes = [
     ProjectsModule,
     ReviewsModule,
     UsersModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    StoreModule.forFeature('market', reducers)
   ]
 })
 export class MarketModule { }

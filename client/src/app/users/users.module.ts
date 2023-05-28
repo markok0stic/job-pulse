@@ -28,6 +28,7 @@ const routes: Routes = [
   ],
   exports: [
     LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     CommonModule,

@@ -3,11 +3,11 @@
   <nav>
     <ul>
       <li><a href="#">Browse Projects</a></li>
-      <li><a href="#">Sign Up</a></li>
-      <li><button (click)="showLogin = !showLogin">Login</button></li>
+      <li><button (click)="toggleLogin()">Login</button></li>
+      <li><button (click)="toggleRegister()">Register</button></li>
     </ul>
   </nav>
 </header>
-
-
-<app-login *ngIf="showLogin"></app-login>
+<app-overlay *ngIf="(showRegister$ | async) || (showLogin$ | async)" (click)="overlayClick()"></app-overlay>
+<app-login *ngIf="showLogin$ | async"></app-login>
+<app-register *ngIf="showRegister$ | async"></app-register>
