@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-profile-button',
-  templateUrl: './profile-button.component.html',
-  styleUrls: ['./profile-button.component.css']
+  selector: 'users-profile-dropdown',
+  templateUrl: './profile-dropdown.component.html',
+  styleUrls: ['./profile-dropdown.component.css']
 })
-export class ProfileButtonComponent {
+export class ProfileDropdownComponent {
   isDropdownOpen: boolean = false;
   profilePictureUrl: string = 'path/to/profile-picture.png';
 

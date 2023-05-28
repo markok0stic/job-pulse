@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-register',
+  selector: 'users-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })

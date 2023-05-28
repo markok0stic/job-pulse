@@ -8,11 +8,11 @@
         <li><button (click)="toggleRegister()">Register</button></li>
       </ng-container>
       <ng-container *ngIf="!user">
-        <li><app-profile-button></app-profile-button></li>
+        <li><users-profile-dropdown></users-profile-dropdown></li>
       </ng-container>
     </ul>
   </nav>
 </header>
 <app-overlay *ngIf="(showRegister$ | async) || (showLogin$ | async)" (click)="overlayClick()"></app-overlay>
-<app-login *ngIf="showLogin$ | async"></app-login>
-<app-register *ngIf="showRegister$ | async"></app-register>
+<users-login *ngIf="showLogin$ | async"></users-login>
+<users-register *ngIf="showRegister$ | async"></users-register>

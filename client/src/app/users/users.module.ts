@@ -8,7 +8,7 @@ import {UserEffects} from "./store/user.effects";
 import {HttpClientModule} from "@angular/common/http";
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { ProfileButtonComponent } from './components/profile-button/profile-button.component';
+import { ProfileDropdownComponent } from './components/profile-dropdown/profile-dropdown.component';
 
 
 const routes: Routes = [
@@ -26,12 +26,12 @@ const routes: Routes = [
   declarations: [
     LoginComponent,
     RegisterComponent,
-    ProfileButtonComponent
+    ProfileDropdownComponent
   ],
     exports: [
         LoginComponent,
         RegisterComponent,
-        ProfileButtonComponent,
+        ProfileDropdownComponent,
     ],
   imports: [
     CommonModule,

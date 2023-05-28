@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-filters',
+  selector: 'projects-filters',
   templateUrl: './filters.component.html',
   styleUrls: ['./filters.component.css']
 })
