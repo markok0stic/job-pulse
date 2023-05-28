@@ -7,6 +7,10 @@ import { ListComponent } from './components/list/list.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ContainerComponent } from './components/main-container/container.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { DetailsComponent } from './components/details/details.component';
+import { FormComponent } from './components/form/form.component';
+import { BidComponent } from './components/bid/bid.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 
@@ -17,7 +21,11 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     SidebarComponent,
     ListComponent,
     HeaderComponent,
-    ContainerComponent
+    ContainerComponent,
+    DetailsComponent,
+    FormComponent,
+    BidComponent,
+    DashboardComponent
   ],
   imports: [
     CommonModule,

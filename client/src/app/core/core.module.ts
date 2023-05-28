@@ -12,6 +12,7 @@ import {StoreModule} from "@ngrx/store";
 import {reducers} from "./store/market.reducers";
 import { OverlayComponent } from './components/overlay/overlay.component';
 import {ContainerComponent} from "../projects/components/main-container/container.component";
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 const routes: Routes = [
   { path: '**', redirectTo: '/not-found' },
@@ -23,7 +24,8 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     LayoutComponent,
-    OverlayComponent
+    OverlayComponent,
+    PaginationComponent
   ],
   exports: [
     HeaderComponent,
@@ -40,4 +42,4 @@ const routes: Routes = [
     StoreModule.forFeature('market', reducers)
   ]
 })
-export class MarketModule { }
+export class CoreModule { }
