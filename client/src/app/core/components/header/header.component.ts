@@ -3,8 +3,8 @@ import {User} from "../../../users/types/user";
 import {Observable} from "rxjs";
 import {AppState} from "../../../app.state";
 import {select, Store} from "@ngrx/store";
-import {loginIsToggled, registerIsToggled} from "../../store/market.selectors";
-import {overlayClick, toggleLogin, toggleRegister} from "../../store/market.actions";
+import {loginIsToggled, registerIsToggled} from "../../store/core.selectors";
+import {overlayClick, toggleLogin, toggleRegister} from "../../store/core.actions";
 
 @Component({
   selector: 'app-header',

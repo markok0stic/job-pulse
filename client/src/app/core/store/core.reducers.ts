@@ -1,9 +1,9 @@
-import {MarketState} from "./market.state";
+import {CoreState} from "./core.state";
 import {createReducer, on} from "@ngrx/store";
-import * as MarketActions from "./market.actions";
+import * as MarketActions from "./core.actions";
 import {state} from "@angular/animations";
 
-export const initialState: MarketState = {
+export const initialState: CoreState = {
   showLogin: false,
   showRegister: false
 };

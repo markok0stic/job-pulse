@@ -1,0 +1,15 @@
+.projects-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-self: center;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

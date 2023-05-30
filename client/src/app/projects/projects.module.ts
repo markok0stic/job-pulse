@@ -1,17 +1,16 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SearchComponent } from './components/search/search.component';
-import { FiltersComponent } from './components/filters/filters.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { ListComponent } from './components/list/list.component';
-import { HeaderComponent } from './components/header/header.component';
-import { ContainerComponent } from './components/main-container/container.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {SearchComponent} from './components/search/search.component';
+import {FiltersComponent} from './components/filters/filters.component';
+import {SidebarComponent} from './components/sidebar/sidebar.component';
+import {ListComponent} from './components/list/list.component';
+import {HeaderComponent} from './components/header/header.component';
+import {ContainerComponent} from './components/main-container/container.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { DetailsComponent } from './components/details/details.component';
-import { FormComponent } from './components/form/form.component';
-import { BidComponent } from './components/bid/bid.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-
+import {DetailsComponent} from './components/details/details.component';
+import {FormComponent} from './components/form/form.component';
+import {BidComponent} from './components/bid/bid.component';
+import {DashboardComponent} from './components/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -33,4 +32,5 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     ReactiveFormsModule
   ]
 })
-export class ProjectsModule { }
+export class ProjectsModule {
+}

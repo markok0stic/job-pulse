@@ -1,7 +1,7 @@
 import {UserState} from "./users/store/user.state";
-import {MarketState} from "./core/store/market.state";
+import {CoreState} from "./core/store/core.state";
 
 export interface AppState{
   users: UserState
-  market: MarketState
+  market: CoreState
 }
