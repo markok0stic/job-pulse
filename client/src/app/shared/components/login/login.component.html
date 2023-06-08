@@ -1,4 +1,6 @@
+<app-overlay *ngIf="showLogin$ | async" (click)="overlayClick()"></app-overlay>
 <div class="login-container">
+  <app-escape></app-escape>
   <h2>Login</h2>
   <form>
     <div class="form-group">

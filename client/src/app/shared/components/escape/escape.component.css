@@ -1,0 +1,7 @@
+.app-esc-wrapper{
+  display: flex;
+  justify-content: flex-end;
+}
+.app-esc{
+  cursor: pointer;
+}

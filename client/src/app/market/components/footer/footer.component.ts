@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {User} from "../../../users/types/user";
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-footer',

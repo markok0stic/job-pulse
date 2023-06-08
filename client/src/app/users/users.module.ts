@@ -6,9 +6,9 @@ import {RouterModule, Routes} from "@angular/router";
 import {EffectsModule} from "@ngrx/effects";
 import {UserEffects} from "./store/user.effects";
 import {HttpClientModule} from "@angular/common/http";
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
-import { ProfileDropdownComponent } from './components/profile-dropdown/profile-dropdown.component';
+import {LoginComponent} from "../shared/components/login/login.component";
+import {RegisterComponent} from "../shared/components/register/register.component";
+import {SharedModule} from "../shared/shared.module";
 
 
 const routes: Routes = [
@@ -24,18 +24,11 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    LoginComponent,
-    RegisterComponent,
-    ProfileDropdownComponent
   ],
-    exports: [
-        LoginComponent,
-        RegisterComponent,
-        ProfileDropdownComponent,
-    ],
   imports: [
     CommonModule,
     HttpClientModule,
+    SharedModule,
     StoreModule.forFeature('users', reducers),
     EffectsModule.forFeature([UserEffects]),
     RouterModule.forChild(routes)

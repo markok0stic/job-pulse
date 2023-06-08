@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'users-profile-dropdown',
+  selector: 'app-profile-dropdown',
   templateUrl: './profile-dropdown.component.html',
   styleUrls: ['./profile-dropdown.component.css']
 })

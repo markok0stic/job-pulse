@@ -1,4 +1,4 @@
-export interface CoreState {
+export interface SharedState {
   showLogin: boolean;
   showRegister: boolean;
 }

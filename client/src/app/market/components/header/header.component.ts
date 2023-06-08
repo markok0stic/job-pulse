@@ -3,8 +3,8 @@ import {User} from "../../../users/types/user";
 import {Observable} from "rxjs";
 import {AppState} from "../../../app.state";
 import {select, Store} from "@ngrx/store";
-import {loginIsToggled, registerIsToggled} from "../../store/core.selectors";
-import {overlayClick, toggleLogin, toggleRegister} from "../../store/core.actions";
+import {loginIsToggled, registerIsToggled} from "../../../shared/store/shared.selectors";
+import { overlayClick, toggleLogin, toggleRegister } from 'src/app/shared/store/shared.actions';
 
 @Component({
   selector: 'app-header',
@@ -21,10 +21,6 @@ export class HeaderComponent implements OnInit {
     this.showRegister$ = this.store.pipe(select(registerIsToggled));
   }
   ngOnInit(): void {
-  }
-
-  overlayClick(): void {
-    this.store.dispatch(overlayClick());
   }
 
   toggleLogin(): void {

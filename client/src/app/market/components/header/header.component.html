@@ -1,0 +1,17 @@
+<header class="header not-logged-in">
+  <div class="logo">JobPulse</div>
+  <nav>
+    <ul>
+      <li><a href="#">Browse Projects</a></li>
+      <ng-container *ngIf="!user">
+        <li><button class="btn-auth" (click)="toggleLogin()">Login</button></li>
+        <li><button class="btn-auth" (click)="toggleRegister()">Register</button></li>
+      </ng-container>
+      <ng-container *ngIf="!user">
+        <li><app-profile-dropdown></app-profile-dropdown></li>
+      </ng-container>
+    </ul>
+  </nav>
+</header>
+<app-login *ngIf="showLogin$ | async"></app-login>
+<app-register *ngIf="showRegister$ | async"></app-register>

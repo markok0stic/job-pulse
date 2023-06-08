@@ -1,4 +1,6 @@
+<app-overlay *ngIf="showRegister$ | async" (click)="overlayClick()"></app-overlay>
 <div class="register-container">
+  <app-escape></app-escape>
   <h2>Register</h2>
   <form>
     <div class="form-group">

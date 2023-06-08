@@ -6,13 +6,9 @@ import {RouterModule, Routes} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import {LayoutComponent} from './components/layout/layout.component';
 import {ProjectsModule} from "../projects/projects.module";
-import {UsersModule} from "../users/users.module";
-import {StoreModule} from "@ngrx/store";
-import {reducers} from "./store/core.reducers";
-import {OverlayComponent} from './components/overlay/overlay.component';
 import {ContainerComponent} from "../projects/components/main-container/container.component";
-import {PaginationComponent} from './components/pagination/pagination.component';
-import {NotFoundComponent} from './components/not-found/not-found.component';
+import {NotFoundComponent} from "../shared/components/not-found/not-found.component";
+import {SharedModule} from "../shared/shared.module";
 
 const routes: Routes = [
   {path: '', component: ContainerComponent},
@@ -25,9 +21,6 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     LayoutComponent,
-    OverlayComponent,
-    PaginationComponent,
-    NotFoundComponent
   ],
   exports: [
     HeaderComponent,
@@ -38,10 +31,9 @@ const routes: Routes = [
     CommonModule,
     HttpClientModule,
     ProjectsModule,
-    UsersModule,
+    SharedModule,
     RouterModule.forChild(routes),
-    StoreModule.forFeature('market', reducers)
   ]
 })
-export class CoreModule {
+export class MarketModule {
 }

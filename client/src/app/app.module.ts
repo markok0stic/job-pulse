@@ -6,7 +6,7 @@ import { StoreModule } from '@ngrx/store';
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {EffectsModule} from "@ngrx/effects";
 import {UsersModule} from "./users/users.module";
-import {CoreModule} from "./core/core.module";
+import {MarketModule} from "./market/market.module";
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import {CoreModule} from "./core/core.module";
     BrowserModule,
     AppRoutingModule,
     UsersModule,
-    CoreModule
+    MarketModule
   ],
   providers: [],
   bootstrap: [AppComponent]

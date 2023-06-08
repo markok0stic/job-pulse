@@ -1,10 +1,11 @@
 .header {
   padding: 20px;
-  background-color: #fff;
+  background-color: #4caf50;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
 }
 
 .header .logo {
@@ -25,30 +26,23 @@
 
 .header ul li a {
   text-decoration: none;
-  color: #333;
-}
-
-.header.logged-in {
-  background-color: #f5f5f5;
-}
-
-.header.logged-in .logo {
-  color: #4caf50;
-}
-
-.header.logged-in ul li a {
-  color: #333;
-}
-
-.header.not-logged-in {
-  background-color: #4caf50;
   color: #fff;
 }
 
-.header.not-logged-in .logo {
+.btn-auth {
+  padding: 10px 20px;
+  background-color: #23527c;
   color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.header.not-logged-in ul li a {
-  color: #fff;
+.btn-auth:hover {
+  background-color: #17324d;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;
 }
