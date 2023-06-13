@@ -1,14 +1,14 @@
 <header class="header not-logged-in">
-  <div class="logo">JobPulse</div>
+  <a routerLink="/" class="logo">JobPulse</a>
   <nav>
-    <ul>
-      <li><a href="#">Browse Projects</a></li>
+    <ul class="nav-ul">
+      <li><a routerLink="/" class="nav-item">Projects</a></li>
       <ng-container *ngIf="!user">
-        <li><button class="btn-auth" (click)="toggleLogin()">Login</button></li>
-        <li><button class="btn-auth" (click)="toggleRegister()">Register</button></li>
+        <li><a class="nav-item" (click)="toggleLogin()">Login</a></li>
+        <li><a class="nav-item" (click)="toggleRegister()">Register</a></li>
       </ng-container>
       <ng-container *ngIf="!user">
-        <li><app-profile-dropdown></app-profile-dropdown></li>
+        <li><app-profile-dropdown class="nav-item"></app-profile-dropdown></li>
       </ng-container>
     </ul>
   </nav>
