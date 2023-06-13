@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, HostListener, Input, OnInit} from '@angular/core';
 import {User} from "../../../users/types/user";
 import {Observable} from "rxjs";
 import {AppState} from "../../../app.state";
@@ -12,6 +12,7 @@ import { overlayClick, toggleLogin, toggleRegister } from 'src/app/shared/store/
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  isHeaderSticky: boolean = false;
   @Input() user: User | null = null;
   showLogin$: Observable<boolean>;
   showRegister$: Observable<boolean>;
@@ -29,5 +30,10 @@ export class HeaderComponent implements OnInit {
 
   toggleRegister(): void {
     this.store.dispatch(toggleRegister());
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isHeaderSticky = window.pageYOffset > 0;
   }
 }

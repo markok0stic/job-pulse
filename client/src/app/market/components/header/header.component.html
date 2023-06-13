@@ -1,17 +1,17 @@
-<header class="header not-logged-in">
+<header class="header" [class.sticky]="isHeaderSticky">
+  <div class="nav">
   <a routerLink="/" class="logo">JobPulse</a>
-  <nav>
-    <ul class="nav-ul">
-      <li><a routerLink="/" class="nav-item">Projects</a></li>
+  <nav class="header-nav">
+      <a routerLink="/" class="nav-item">Projects</a>
       <ng-container *ngIf="!user">
-        <li><a class="nav-item" (click)="toggleLogin()">Login</a></li>
-        <li><a class="nav-item" (click)="toggleRegister()">Register</a></li>
+        <a class="nav-item" (click)="toggleLogin()">Login</a>
+        <a class="nav-item-reg" (click)="toggleRegister()">Become a freelancer</a>
       </ng-container>
-      <ng-container *ngIf="!user">
-        <li><app-profile-dropdown class="nav-item"></app-profile-dropdown></li>
-      </ng-container>
-    </ul>
   </nav>
+  <ng-container *ngIf="!user">
+    <app-profile-dropdown class="profile-button"></app-profile-dropdown>
+  </ng-container>
+</div>
 </header>
 <app-login *ngIf="showLogin$ | async"></app-login>
 <app-register *ngIf="showRegister$ | async"></app-register>
