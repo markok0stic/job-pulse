@@ -8,7 +8,7 @@
         <a class="nav-item-reg" (click)="toggleRegister()">Become a freelancer</a>
       </ng-container>
   </nav>
-  <ng-container *ngIf="!user">
+  <ng-container *ngIf="user">
     <app-profile-dropdown class="profile-button"></app-profile-dropdown>
   </ng-container>
 </div>

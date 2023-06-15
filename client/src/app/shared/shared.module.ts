@@ -9,6 +9,7 @@ import {RegisterComponent} from "./components/register/register.component";
 import {ProfileDropdownComponent} from "./components/profile-dropdown/profile-dropdown.component";
 import {StoreModule} from "@ngrx/store";
 import {reducers} from "./store/shared.reducers";
+import { LoginNavigationComponent } from './components/login-navigation/login-navigation.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import {reducers} from "./store/shared.reducers";
     NotFoundComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileDropdownComponent
+    ProfileDropdownComponent,
+    LoginNavigationComponent
   ],
   exports: [
     OverlayComponent,
@@ -28,7 +30,8 @@ import {reducers} from "./store/shared.reducers";
     PaginationComponent,
     LoginComponent,
     RegisterComponent,
-    ProfileDropdownComponent
+    ProfileDropdownComponent,
+    LoginNavigationComponent
   ],
   imports: [
     CommonModule,

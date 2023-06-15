@@ -1,11 +1,9 @@
 <div class="profile-button" (click)="toggleDropdown()">
   <img class="profile-picture" [src]="profilePictureUrl" alt="Profile Picture">
   <span class="dropdown-icon"></span>
-
   <div class="dropdown-menu" *ngIf="isDropdownOpen">
     <ul>
-      <li><a> Settings</a></li>
-      <li><a> Settings</a></li>
+      <li><a routerLink="/">Profile</a></li>
       <li><a (click)="logout()">Logout</a></li>
     </ul>
   </div>
