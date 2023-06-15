@@ -1,4 +1,5 @@
 <app-header *ngIf="isAuthPage" [user]="user$ | async"></app-header>
-<app-login-navigation *ngIf="!(user$ | async)"></app-login-navigation>
+<app-sub-navigation *ngIf="!(user$ | async)"></app-sub-navigation>
+<app-nav-router></app-nav-router>
 <router-outlet></router-outlet>
 <app-footer *ngIf="isAuthPage"></app-footer>

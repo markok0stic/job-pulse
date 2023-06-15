@@ -1,4 +1,5 @@
 body {
   margin: 0;
-  width: 100%/* Adds 10 pixels margin on the left and right sides */
+  width: 100%;
+  background-color: #f0f0f0;
 }

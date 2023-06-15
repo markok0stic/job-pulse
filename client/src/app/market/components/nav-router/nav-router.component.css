@@ -1,0 +1,24 @@
+.nav-router-main-container .router  {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  align-self: center;
+}
+
+.nav-router-main-container .router a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-router-main-container .router a:hover {
+  text-decoration: underline;
+}
+
+.nav-router-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

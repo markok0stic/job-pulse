@@ -9,7 +9,7 @@ import {RegisterComponent} from "./components/register/register.component";
 import {ProfileDropdownComponent} from "./components/profile-dropdown/profile-dropdown.component";
 import {StoreModule} from "@ngrx/store";
 import {reducers} from "./store/shared.reducers";
-import { LoginNavigationComponent } from './components/login-navigation/login-navigation.component';
+import { SubNavigationComponent } from './components/sub-navigation/sub-navigation.component';
 
 
 @NgModule({
@@ -21,7 +21,7 @@ import { LoginNavigationComponent } from './components/login-navigation/login-na
     LoginComponent,
     RegisterComponent,
     ProfileDropdownComponent,
-    LoginNavigationComponent
+    SubNavigationComponent
   ],
   exports: [
     OverlayComponent,
@@ -31,7 +31,7 @@ import { LoginNavigationComponent } from './components/login-navigation/login-na
     LoginComponent,
     RegisterComponent,
     ProfileDropdownComponent,
-    LoginNavigationComponent
+    SubNavigationComponent
   ],
   imports: [
     CommonModule,

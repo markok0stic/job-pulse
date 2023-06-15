@@ -9,7 +9,8 @@ import {ProjectsModule} from "../projects/projects.module";
 import {ContainerComponent} from "../projects/components/main-container/container.component";
 import {NotFoundComponent} from "../shared/components/not-found/not-found.component";
 import {SharedModule} from "../shared/shared.module";
-import {LoginNavigationComponent} from "../shared/components/login-navigation/login-navigation.component";
+import {SubNavigationComponent} from "../shared/components/sub-navigation/sub-navigation.component";
+import { NavRouterComponent } from './components/nav-router/nav-router.component';
 
 const routes: Routes = [
   {path: '', component: ContainerComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     LayoutComponent,
+    NavRouterComponent,
   ],
   exports: [
     HeaderComponent,
