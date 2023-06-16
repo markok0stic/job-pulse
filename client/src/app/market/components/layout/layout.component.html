@@ -1,5 +1,7 @@
 <app-header *ngIf="isAuthPage" [user]="user$ | async"></app-header>
 <app-sub-navigation *ngIf="!(user$ | async)"></app-sub-navigation>
 <app-nav-router></app-nav-router>
-<router-outlet></router-outlet>
+<div class="min-h-screen">
+  <router-outlet></router-outlet>
+</div>
 <app-footer *ngIf="isAuthPage"></app-footer>

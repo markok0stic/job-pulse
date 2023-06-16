@@ -1,7 +1,7 @@
 <app-overlay *ngIf="showRegister$ | async" (click)="overlayClick()"></app-overlay>
 <div class="register-container">
   <app-escape></app-escape>
-  <h2>Register</h2>
+  <h2 class="font-bold">Register</h2>
   <form>
     <div class="form-group">
       <label for="email">Email</label>
@@ -19,6 +19,6 @@
       <label for="confirm-password">Repeat Password</label>
       <input type="password" id="confirm-password" name="password" placeholder="Re-enter your password">
     </div>
-    <button type="submit">Register</button>
+    <button class="bg-blue-900 hover:bg-gray-900" type="submit">Register</button>
   </form>
 </div>

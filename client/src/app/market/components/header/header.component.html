@@ -1,17 +1,17 @@
-<header class="header" [class.sticky]="isHeaderSticky">
-  <div class="nav">
-  <a routerLink="/" class="logo">JobPulse</a>
-  <nav class="header-nav">
-      <a routerLink="/" class="nav-item">Browse</a>
-      <ng-container *ngIf="!user">
-        <a class="nav-item" (click)="toggleLogin()">Login</a>
-        <a class="nav-item-reg" (click)="toggleRegister()">Become a freelancer</a>
+<header class="header bg-blue-900 sticky shadow" [class.sticky]="isHeaderSticky">
+  <div class="nav bg-blue-900 py-4 text-white flex flex-row space-between max-w-7xl w-full">
+    <a routerLink="/" class="text-2xl font-bold">JobPulse</a>
+    <nav class="flex space-x-4 items-center">
+      <a routerLink="/" class="hover:text-gray-900 transition-colors duration-200">Browse</a>
+      <ng-container class="flex items-center" *ngIf="!user">
+        <a class="cursor-pointer hover:text-gray-900 transition-colors duration-200" (click)="toggleLogin()">Login</a>
+        <a class="cursor-pointer py-1 px-4 border border-white rounded transition-colors duration-200 hover:bg-gray-800" (click)="toggleRegister()">Become a freelancer</a>
       </ng-container>
-  </nav>
-  <ng-container *ngIf="user">
-    <app-profile-dropdown class="profile-button"></app-profile-dropdown>
-  </ng-container>
-</div>
+    </nav>
+    <ng-container *ngIf="user">
+      <app-profile-dropdown class="self-end"></app-profile-dropdown>
+    </ng-container>
+  </div>
 </header>
 <app-login *ngIf="showLogin$ | async"></app-login>
 <app-register *ngIf="showRegister$ | async"></app-register>

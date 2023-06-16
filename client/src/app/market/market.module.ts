@@ -6,11 +6,11 @@ import {RouterModule, Routes} from "@angular/router";
 import {HttpClientModule} from "@angular/common/http";
 import {LayoutComponent} from './components/layout/layout.component';
 import {ProjectsModule} from "../projects/projects.module";
-import {ContainerComponent} from "../projects/components/main-container/container.component";
+import {ContainerComponent} from "../projects/components/container/container.component";
 import {NotFoundComponent} from "../shared/components/not-found/not-found.component";
 import {SharedModule} from "../shared/shared.module";
-import {SubNavigationComponent} from "../shared/components/sub-navigation/sub-navigation.component";
 import { NavRouterComponent } from './components/nav-router/nav-router.component';
+import {SubNavigationComponent} from "./components/sub-navigation/sub-navigation.component";
 
 const routes: Routes = [
   {path: '', component: ContainerComponent},
@@ -24,6 +24,7 @@ const routes: Routes = [
     FooterComponent,
     LayoutComponent,
     NavRouterComponent,
+    SubNavigationComponent
   ],
   exports: [
     HeaderComponent,
