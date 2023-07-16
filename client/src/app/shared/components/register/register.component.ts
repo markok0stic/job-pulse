@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Observable} from "rxjs";
 import {select, Store} from "@ngrx/store";
 import {AppState} from "../../../app.state";
@@ -11,6 +11,7 @@ import { overlayClick } from '../../store/shared.actions';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
+  @Input() isAuthPage: boolean = false;
   showRegister$: Observable<boolean>;
   constructor(private store: Store<AppState>) {
     this.showRegister$ = this.store.pipe(select(registerIsToggled));

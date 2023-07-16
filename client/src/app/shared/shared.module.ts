@@ -9,6 +9,8 @@ import {RegisterComponent} from "./components/register/register.component";
 import {ProfileDropdownComponent} from "./components/profile-dropdown/profile-dropdown.component";
 import {StoreModule} from "@ngrx/store";
 import {reducers} from "./store/shared.reducers";
+import {EffectsModule} from "@ngrx/effects";
+import {SharedEffects} from "./store/shared.effects";
 
 
 @NgModule({
@@ -32,7 +34,8 @@ import {reducers} from "./store/shared.reducers";
   ],
   imports: [
     CommonModule,
-    StoreModule.forFeature('shared', reducers)
+    StoreModule.forFeature('shared', reducers),
+    EffectsModule.forFeature([SharedEffects])
   ],
 })
 export class SharedModule { }

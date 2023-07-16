@@ -1,6 +1,6 @@
 <app-overlay *ngIf="showLogin$ | async" (click)="overlayClick()"></app-overlay>
 <div class="flex fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md p-5 rounded border-2 border-solid border-gray-200 bg-white z-50 flex-col">
-  <app-escape></app-escape>
+  <app-escape *ngIf="isAuthPage"></app-escape>
   <h2 class="text-center bottom-5 font-bold self-center">Login</h2>
   <form>
     <div class="mb-4">

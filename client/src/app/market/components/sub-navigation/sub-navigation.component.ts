@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {User} from "../../../users/types/user";
 
 @Component({
   selector: 'app-sub-navigation',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./sub-navigation.component.css']
 })
 export class SubNavigationComponent {
+  @Input() user: User | null = null;
 
 }

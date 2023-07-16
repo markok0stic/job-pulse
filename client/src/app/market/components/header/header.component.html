@@ -13,5 +13,5 @@
     </nav>
   </div>
 </header>
-<app-login *ngIf="showLogin$ | async"></app-login>
-<app-register *ngIf="showRegister$ | async"></app-register>
+<app-login *ngIf="showLogin$ | async" [isAuthPage]="isAuthPage"></app-login>
+<app-register *ngIf="showRegister$ | async" [isAuthPage]="isAuthPage"></app-register>

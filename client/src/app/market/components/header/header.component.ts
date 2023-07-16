@@ -12,10 +12,11 @@ import { overlayClick, toggleLogin, toggleRegister } from 'src/app/shared/store/
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  isHeaderSticky: boolean = false;
+  @Input() isAuthPage: boolean = false;
   @Input() user: User | null = null;
   showLogin$: Observable<boolean>;
   showRegister$: Observable<boolean>;
+  isHeaderSticky: boolean = false;
 
   constructor(private store: Store<AppState>) {
     this.showLogin$ = this.store.pipe(select(loginIsToggled));
